@@ -47,6 +47,11 @@ class SubMerchantController < ApplicationController
     require "braintree"
     
     #Add API keys
+    
+    Braintree::Configuration.environment = :sandbox
+    Braintree::Configuration.merchant_id = 'wnvz9cp784t4nfx5'
+    Braintree::Configuration.public_key = '3jyd4h4d7jvcwhf2'
+    Braintree::Configuration.private_key = '7a31ddc0b762c1157a6abba53229080e'
 
 
   end

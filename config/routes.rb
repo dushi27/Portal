@@ -1,4 +1,6 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
+  root 'static_pages#home'
+
   resources :patient_profiles
 
   resources :doctor_profiles

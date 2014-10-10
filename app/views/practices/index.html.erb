@@ -1,0 +1,41 @@
+<h1>Listing practices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Speciality</th>
+      <th>Address 1</th>
+      <th>Addres 2</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @practices.each do |practice| %>
+      <tr>
+        <td><%= practice.name %></td>
+        <td><%= practice.speciality %></td>
+        <td><%= practice.address_1 %></td>
+        <td><%= practice.addres_2 %></td>
+        <td><%= practice.zip %></td>
+        <td><%= practice.phone %></td>
+        <td><%= practice.fax %></td>
+        <td><%= practice.email %></td>
+        <td><%= practice.website %></td>
+        <td><%= link_to 'Show', practice %></td>
+        <td><%= link_to 'Edit', edit_practice_path(practice) %></td>
+        <td><%= link_to 'Destroy', practice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Practice', new_practice_path %>

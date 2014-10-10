@@ -1,30 +1,23 @@
 class DoctorProfilesController < ApplicationController
   before_action :set_doctor_profile, only: [:show, :edit, :update, :destroy]
 
-  # GET /doctor_profiles
-  # GET /doctor_profiles.json
   def index
     @doctor_profiles = DoctorProfile.all
   end
 
-  # GET /doctor_profiles/1
-  # GET /doctor_profiles/1.json
   def show
   end
 
-  # GET /doctor_profiles/new
   def new
     @doctor_profile = DoctorProfile.new
   end
 
-  # GET /doctor_profiles/1/edit
   def edit
   end
 
-  # POST /doctor_profiles
-  # POST /doctor_profiles.json
   def create
-    @doctor_profile = DoctorProfile.new(doctor_profile_params)
+    @practice = Practice.find(session[:orgid])
+    @doctor_profile = @practice.doctor_profiles.create(doctor_profile_params)
 
     respond_to do |format|
       if @doctor_profile.save
@@ -37,8 +30,6 @@ class DoctorProfilesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /doctor_profiles/1
-  # PATCH/PUT /doctor_profiles/1.json
   def update
     respond_to do |format|
       if @doctor_profile.update(doctor_profile_params)
@@ -51,8 +42,6 @@ class DoctorProfilesController < ApplicationController
     end
   end
 
-  # DELETE /doctor_profiles/1
-  # DELETE /doctor_profiles/1.json
   def destroy
     @doctor_profile.destroy
     respond_to do |format|
@@ -62,13 +51,11 @@ class DoctorProfilesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_doctor_profile
       @doctor_profile = DoctorProfile.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def doctor_profile_params
-      params.require(:doctor_profile).permit(:firstname, :lastname, :profilepic, :schedule, :speciality, :title, :userid, :zipcode, :fee, :orgid, :plan, :plan, :practice_id, :npi)
+      params.require(:doctor_profile).permit(:firstname, :lastname, :about, :profilepic, :schedule, :speciality, :title, :userid, :zipcode, :fee, :orgid, :npi)
     end
 end

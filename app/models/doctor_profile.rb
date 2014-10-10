@@ -1,3 +1,4 @@
 class DoctorProfile < ActiveRecord::Base
-  validate :orgid, presence: true
+  belongs_to :practice
+  has_many :patient_profiles, foreign_key: "userid"  
 end

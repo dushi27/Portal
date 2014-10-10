@@ -45,8 +45,9 @@ class SubMerchantController < ApplicationController
   def init_braintree
     require "rubygems"
     require "braintree"
+    
+    #Add API keys
 
-    #add API keys here
 
   end
   

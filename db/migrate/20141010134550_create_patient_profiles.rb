@@ -1,7 +1,7 @@
 class CreatePatientProfiles < ActiveRecord::Migration
   def change
     create_table :patient_profiles do |t|
-      t.string :user_id
+      t.string :userid
       t.string :firstname
       t.string :lastname
       t.string :pcprequest

@@ -39,7 +39,7 @@ RSpec.describe "doctor_profiles/edit", :type => :view do
 
       assert_select "input#doctor_profile_zipcode[name=?]", "doctor_profile[zipcode]"
 
-      assert_select "input#doctor_profile_fee[name=?]", "doctor_profile[fee]"
+      assert_select "input#doctor_profile_fee[name!=?]", "doctor_profile[fee]"
 
       assert_select "input#doctor_profile_orgid[name=?]", "doctor_profile[orgid]"
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :doctor_profiles
+
   resources :practices
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,73 @@
+<%= form_for(@doctor_profile) do |f| %>
+  <% if @doctor_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doctor_profile.errors.count, "error") %> prohibited this doctor_profile from being saved:</h2>
+
+      <ul>
+      <% @doctor_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :profilepic %><br>
+    <%= f.text_area :profilepic %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %><br>
+    <%= f.text_field :schedule %>
+  </div>
+  <div class="field">
+    <%= f.label :speciality %><br>
+    <%= f.text_field :speciality %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :userid %><br>
+    <%= f.text_field :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :fee %><br>
+    <%= f.text_field :fee %>
+  </div>
+  <div class="field">
+    <%= f.label :orgid %><br>
+    <%= f.text_field :orgid %>
+  </div>
+  <div class="field">
+    <%= f.label :plan %><br>
+    <%= f.text_field :plan %>
+  </div>
+  <div class="field">
+    <%= f.label :plan %><br>
+    <%= f.text_field :plan %>
+  </div>
+  <div class="field">
+    <%= f.label :practice_id %><br>
+    <%= f.number_field :practice_id %>
+  </div>
+  <div class="field">
+    <%= f.label :npi %><br>
+    <%= f.text_field :npi %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

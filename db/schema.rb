@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010125807) do
+ActiveRecord::Schema.define(version: 20141010131438) do
+
+  create_table "doctor_profiles", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.text     "about"
+    t.text     "profilepic", limit: 16777215
+    t.string   "schedule"
+    t.string   "speciality"
+    t.string   "title"
+    t.string   "userid"
+    t.string   "zipcode"
+    t.decimal  "fee",                         precision: 8, scale: 2
+    t.decimal  "decimal",                     precision: 8, scale: 2
+    t.string   "plan"
+    t.string   "npi"
+    t.string   "orgid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "practices", force: true do |t|
     t.string   "name"

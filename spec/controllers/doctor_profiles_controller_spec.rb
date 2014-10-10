@@ -38,25 +38,10 @@ RSpec.describe DoctorProfilesController, :type => :controller do
       "plan" => "MyString",
       "npi" => "MyString"    
     }}
-      
-  
+        
 
   let(:invalid_attributes) {
-    {
-      "firstname" => "MyString",
-      "lastname" => "MyString",
-      "profilepic" => "MyText",
-      "about" => "my text",
-      "schedule" => "MyString",
-      "speciality" => "MyString",
-      "title" => "MyString",
-      "userid" => "MyString",
-      "zipcode" => "MyString",
-      "fee" => "9.99",
-      "orgid" => "",
-      "plan" => "MyString",
-      "npi" => "MyString"    
-    }
+    skip("Add a hash of attributes invalid for your model")
   }
 
   # This should return the minimal set of values that should be in the session

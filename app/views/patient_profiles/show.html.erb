@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @patient_profile.user_id %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @patient_profile.firstname %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @patient_profile.lastname %>
+</p>
+
+<p>
+  <strong>Pcprequest:</strong>
+  <%= @patient_profile.pcprequest %>
+</p>
+
+<p>
+  <strong>Profilepic:</strong>
+  <%= @patient_profile.profilepic %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @patient_profile.zipcode %>
+</p>
+
+<p>
+  <strong>Docpref1:</strong>
+  <%= @patient_profile.docpref1 %>
+</p>
+
+<p>
+  <strong>Docpref2:</strong>
+  <%= @patient_profile.docpref2 %>
+</p>
+
+<p>
+  <strong>Doctpref3:</strong>
+  <%= @patient_profile.doctpref3 %>
+</p>
+
+<%= link_to 'Edit', edit_patient_profile_path(@patient_profile) %> |
+<%= link_to 'Back', patient_profiles_path %>

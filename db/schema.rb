@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010131438) do
+ActiveRecord::Schema.define(version: 20141010134550) do
 
   create_table "doctor_profiles", force: true do |t|
     t.string   "firstname"
@@ -28,6 +28,20 @@ ActiveRecord::Schema.define(version: 20141010131438) do
     t.string   "plan"
     t.string   "npi"
     t.string   "orgid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patient_profiles", force: true do |t|
+    t.string   "user_id"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "pcprequest"
+    t.text     "profilepic", limit: 16777215
+    t.string   "zipcode"
+    t.integer  "docpref1"
+    t.integer  "docpref2"
+    t.integer  "doctpref3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

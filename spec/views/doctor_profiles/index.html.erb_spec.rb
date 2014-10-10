@@ -15,8 +15,6 @@ RSpec.describe "doctor_profiles/index", :type => :view do
         :fee => "9.99",
         :orgid => "Orgid",
         :plan => "Plan",
-        :plan => "Plan",
-        :practice_id => 1,
         :npi => "Npi"
       ),
       DoctorProfile.create!(
@@ -31,8 +29,6 @@ RSpec.describe "doctor_profiles/index", :type => :view do
         :fee => "9.99",
         :orgid => "Orgid",
         :plan => "Plan",
-        :plan => "Plan",
-        :practice_id => 1,
         :npi => "Npi"
       )
     ])
@@ -50,7 +46,6 @@ RSpec.describe "doctor_profiles/index", :type => :view do
     assert_select "tr>td", :text => "Zipcode".to_s, :count => 2
     assert_select "tr>td", :text => "9.99".to_s, :count => 2
     assert_select "tr>td", :text => "Orgid".to_s, :count => 2
-    assert_select "tr>td", :text => "Plan".to_s, :count => 2
     assert_select "tr>td", :text => "Plan".to_s, :count => 2
     assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => "Npi".to_s, :count => 2

@@ -14,8 +14,6 @@ RSpec.describe "doctor_profiles/edit", :type => :view do
       :fee => "9.99",
       :orgid => "MyString",
       :plan => "MyString",
-      :plan => "MyString",
-      :practice_id => 1,
       :npi => "MyString"
     ))
   end
@@ -23,7 +21,7 @@ RSpec.describe "doctor_profiles/edit", :type => :view do
   it "renders the edit doctor_profile form" do
     render
 
-    assert_select "form[action=?][method=?]", doctor_profile_path(@doctor_profile), "post" do
+      assert_select "form[action=?][method=?]", doctor_profiles_path(@doctor_profile), "post" do
 
       assert_select "input#doctor_profile_firstname[name=?]", "doctor_profile[firstname]"
 
@@ -46,10 +44,6 @@ RSpec.describe "doctor_profiles/edit", :type => :view do
       assert_select "input#doctor_profile_orgid[name=?]", "doctor_profile[orgid]"
 
       assert_select "input#doctor_profile_plan[name=?]", "doctor_profile[plan]"
-
-      assert_select "input#doctor_profile_plan[name=?]", "doctor_profile[plan]"
-
-      assert_select "input#doctor_profile_practice_id[name=?]", "doctor_profile[practice_id]"
 
       assert_select "input#doctor_profile_npi[name=?]", "doctor_profile[npi]"
     end

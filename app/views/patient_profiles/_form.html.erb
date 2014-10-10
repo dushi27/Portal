@@ -1,0 +1,53 @@
+<%= form_for(@patient_profile) do |f| %>
+  <% if @patient_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient_profile.errors.count, "error") %> prohibited this patient_profile from being saved:</h2>
+
+      <ul>
+      <% @patient_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :pcprequest %><br>
+    <%= f.text_field :pcprequest %>
+  </div>
+  <div class="field">
+    <%= f.label :profilepic %><br>
+    <%= f.text_area :profilepic %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :docpref1 %><br>
+    <%= f.number_field :docpref1 %>
+  </div>
+  <div class="field">
+    <%= f.label :docpref2 %><br>
+    <%= f.number_field :docpref2 %>
+  </div>
+  <div class="field">
+    <%= f.label :doctpref3 %><br>
+    <%= f.number_field :doctpref3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

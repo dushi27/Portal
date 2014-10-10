@@ -14,8 +14,6 @@ RSpec.describe "doctor_profiles/show", :type => :view do
       :fee => "9.99",
       :orgid => "Orgid",
       :plan => "Plan",
-      :plan => "Plan",
-      :practice_id => 1,
       :npi => "Npi"
     ))
   end
@@ -32,7 +30,6 @@ RSpec.describe "doctor_profiles/show", :type => :view do
     expect(rendered).to match(/Zipcode/)
     expect(rendered).to match(/9.99/)
     expect(rendered).to match(/Orgid/)
-    expect(rendered).to match(/Plan/)
     expect(rendered).to match(/Plan/)
     expect(rendered).to match(/1/)
     expect(rendered).to match(/Npi/)

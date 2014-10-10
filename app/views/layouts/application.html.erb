@@ -10,19 +10,22 @@
 <body>
   <%= render 'layouts/topnav'%> 
   
-  <%flash.each do |key,value|%>
-    <%=content_tag(:div, value, class:'alert alert-info')%>
-  <%end%>
+
   
   <%=render 'layouts/side'%>
     
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> 
       <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li ><%=link_to 'Home', root_path%></li>
         <li ><%=link_to 'Basic Information', new_practice_path%></li>
-        <li><%=link_to 'Provider Profile', new_doctor_profile_path%></li>    
-        <li><a href="#">Set up Payment</a></li>
+        <li><%=link_to 'Provider Profile', new_doctor_profile_path%></li> 
+        <li><%=link_to 'Setup Payment', sub_merchant_new_path%></li> 
         <li><%=link_to 'Patient Profile', new_patient_profile_path%></li>
       </ul>
+      
+      <%flash.each do |key,value|%>
+        <%=content_tag(:div, value, class:'alert alert-info')%>
+      <%end%>
 
       <%= yield %>
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do  
+
   root 'static_pages#home'
 
   resources :patient_profiles
@@ -6,6 +7,9 @@ Rails.application.routes.draw do
   resources :doctor_profiles
 
   resources :practices
+  
+  post 'sub_merchant/create_submerchant' => 'sub_merchant#create_submerchant'
+  get 'sub_merchant/new' => 'sub_merchant#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

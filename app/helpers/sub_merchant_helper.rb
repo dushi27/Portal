@@ -1,0 +1,2 @@
+module SubMerchantHelper
+end

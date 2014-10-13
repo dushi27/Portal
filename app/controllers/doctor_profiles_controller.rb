@@ -21,7 +21,7 @@ class DoctorProfilesController < ApplicationController
 
     respond_to do |format|
       if @doctor_profile.save
-        format.html { redirect_to @doctor_profile, notice: 'Doctor profile was successfully created.' }
+        format.html { redirect_to new_doctor_profile_path, notice: "Doctor #{@doctor_profile.firstname + " " + @doctor_profile.lastname} profile was successfully created." }
         format.json { render :show, status: :created, location: @doctor_profile }
       else
         format.html { render :new }

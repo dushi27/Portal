@@ -49,8 +49,6 @@ class SubMerchantController < ApplicationController
     #Add API keys
 
 
-
-
   end
   
 end

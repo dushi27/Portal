@@ -21,7 +21,7 @@ class PracticesController < ApplicationController
     respond_to do |format|
       if @practice.save
         session[:orgid] = @practice.id
-        format.html { redirect_to @practice, notice: 'Practice was successfully created.' }
+        format.html { redirect_to edit_practice_path(@practice), notice: "Practice #{@practice.name} was successfully created." }
         format.json { render :show, status: :created, location: @practice }
       else
         format.html { render :new }
@@ -31,9 +31,10 @@ class PracticesController < ApplicationController
   end
 
   def update
+    @practice = Practice.find(session[:orgid])
     respond_to do |format|
       if @practice.update(practice_params)
-        format.html { redirect_to @practice, notice: 'Practice was successfully updated.' }
+        format.html { redirect_to new_doctor_profile_path, notice: "Practice #{@practice.name} was successfully updated." }
         format.json { render :show, status: :ok, location: @practice }
       else
         format.html { render :edit }
@@ -52,7 +53,7 @@ class PracticesController < ApplicationController
 
   private
     def set_practice
-      @practice = Practice.find(params[:id])
+      @practice = Practice.find(session[:orgid])
     end
   
     def practice_params

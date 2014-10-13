@@ -1,4 +1,7 @@
 <div class="container"> 
+  <br><%=link_to '', edit_practice_path(session[:orgid]), class:'pull-left glyphicon glyphicon-chevron-left'%>
+  <%=link_to '', sub_merchant_new_path, class:'pull-right glyphicon glyphicon-chevron-right'%><br>
+  
   <h1>New doctor_profile</h1> 
   <%= render 'form' %>
 </div>

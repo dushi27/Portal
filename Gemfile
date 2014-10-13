@@ -17,3 +17,7 @@ group :test, :development do
   gem 'sqlite3'
   gem 'rspec-rails', '~>3.0.1' 
 end
+
+group :production do
+  gem 'mysql2'
+end

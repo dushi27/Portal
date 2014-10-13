@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#createSubMerch').bootstrapValidator({
+    $("#docProfile").bootstrapValidator({
         message: 'This value is not valid',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -39,96 +39,50 @@ $(document).ready(function() {
                     }
                 }
             },
-           dob: {
-                validators: {
-                    notEmpty: {
-                        message: 'The date of birth is required'
-                    },                    
-                    date: {
-                        format: 'MM/DD/YYYY',
-                        message: 'The date of birth is not formatted correctly'
-                    }
-                }
-            },
-          street: {
-                validators: {
-                    notEmpty: {
-                        message: 'The street address is required'
-                    }
-                }
-            },
-          city: {
-                validators: {
-                    notEmpty: {
-                        message: 'The city is required'
-                    }
-                }
-            },
-          state: {
+                             
+          speciality: {
                 validators: {   
                   notEmpty: {
                         message: 'The state is required'
-                    },
-                  stringLength: {
-                        max: 2,
-                        message: 'Enter two letter state code Ex. NY'
-                    }
+                  }
                 }
             },
-          zip: {
+          
+          zipcode: {
                 validators: {   
                   notEmpty: {
                         message: 'The ZipCode is required'
-                    },                  
+                   },                  
                     regexp: {
                         regexp: /^\d{5}$/,
                         message: 'The US zipcode must contain 5 digits'
                     }                
+                }                
+          },
+          
+          fee: {
+                validators: {
+                    notEmpty: {
+                        message: 'The fee is required'
+                    }           
+               }
+          },
+          
+          plan: {
+                validators: {
+                    notEmpty: {
+                        message: 'the plan is required'
+                    }           
+               }
+          },
+          
+          npi: {
+                validators: {
+                    notEmpty: {
+                        message: 'The NPI number is required'
+                    }           
                 }
-             },
-          legal_name: {
-                validators: {
-                    notEmpty: {
-                        message: 'The Legal name is required'
-                    }                 
-                    
-                }
-            },
-          dba: {
-                validators: {
-                    notEmpty: {
-                        message: 'The DBA name is required'
-                    }           
-               }
-            },
-          tax_id: {
-                validators: {
-                    notEmpty: {
-                        message: 'the tax ID is required'
-                    }           
-               }
-            },
-          accountno: {
-                validators: {
-                    notEmpty: {
-                        message: 'The account number is required'
-                    }           
-               }
-            },
-          routing: {
-                validators: {
-                    notEmpty: {
-                        message: 'The routing number is required'
-                    }           
-               }
-            },
-          tos: {
-                validators: {
-                    notEmpty: {
-                        message: 'Required field'
-                    }                  
-               }
-            },
-        }
+          }
+        } 
     });
 });

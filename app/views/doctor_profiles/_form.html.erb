@@ -1,4 +1,4 @@
-<%= form_for(@doctor_profile,id: "createSubMerch") do |f| %>
+<%= form_for(@doctor_profile, :html => { :id => 'docProfile' }) do |f| %>
   <% if @doctor_profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@doctor_profile.errors.count, "error") %> prohibited this doctor_profile from being saved:</h2>

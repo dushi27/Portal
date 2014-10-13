@@ -16,8 +16,6 @@ production:
   pool: 5
   timeout: 5000
   database: yourmd
-  username: root
-  password: Ma3fare1
   host: aa1rywc9t8x5oxb.cv9qibmmu6yi.us-east-1.rds.amazonaws.com
   port: 3306
 

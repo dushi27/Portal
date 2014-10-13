@@ -37,7 +37,9 @@ class SubMerchantController < ApplicationController
       if result.success?
         format.html { redirect_to sub_merchant_new_path, notice: "#{result.merchant_account.id} is #{result.merchant_account.status}" }
       else
-        format.html { redirect_to sub_merchant_new_path, notice: "#{result.errors.each {|err| puts err.message + ","}}"}
+        error = Array.new
+        result.errors.each {|err| error << err.message }
+        format.html { redirect_to sub_merchant_new_path, notice: "#{error*","}"}
       end
     end   
   end
@@ -47,8 +49,7 @@ class SubMerchantController < ApplicationController
     require "braintree"
     
     #Add API keys
-
-
+    
   end
   
 end

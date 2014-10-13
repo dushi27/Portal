@@ -75,3 +75,12 @@
 .main .page-header {
   margin-top: 0;
 }
+
+.valid {
+  background-color: green;
+  color: white;
+}
+.error {
+   background-color:red;
+   color: white;
+}

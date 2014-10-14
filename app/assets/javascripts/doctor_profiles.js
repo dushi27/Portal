@@ -7,7 +7,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            firstname: {
+          'doctor_profile[:firstname ]': {
                 validators: {
                     notEmpty: {
                         message: 'The first name is required'
@@ -18,7 +18,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            lastname: {
+            'doctor_profile[:lastname]': {
                 validators: {
                     notEmpty: {
                         message: 'The last name is required'
@@ -30,7 +30,7 @@ $(document).ready(function() {
                 }
             },            
                                          
-          speciality: {
+          'doctor_profile[:speciality]': {
                 validators: {   
                   notEmpty: {
                         message: 'The state is required'
@@ -38,7 +38,7 @@ $(document).ready(function() {
                 }
             },
           
-          zipcode: {
+          'doctor_profile[:zipcode]': {
                 validators: {   
                   notEmpty: {
                         message: 'The ZipCode is required'
@@ -50,7 +50,7 @@ $(document).ready(function() {
                 }                
           },
           
-          fee: {
+          'doctor_profile[:fee]': {
                 validators: {
                     notEmpty: {
                         message: 'The fee is required'

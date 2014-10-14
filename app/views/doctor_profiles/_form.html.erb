@@ -1,103 +1,91 @@
-<%= form_for(@doctor_profile, :html => {:id => "docProfile"}) do |f| %>
-  <% if @doctor_profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@doctor_profile.errors.count, "error") %> prohibited this doctor_profile from being saved:</h2>
-
-      <ul>
-      <% @doctor_profile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_tag('/doctor_profiles', id: "docProfile") do %>
    <div class="form-group"> 
     <div class="container">
-      <%= f.label :firstname %><br>
-      <%= f.text_field :firstname %>
+      <%= label_tag :firstname %><br>
+      <%= text_field_tag "doctor_profile[:firstname ]"%>
      </div>
    </div>
      
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :lastname %><br>
-      <%= f.text_field :lastname %>
+      <%= label_tag :lastname %><br>
+      <%= text_field_tag "doctor_profile[:lastname]" %>
      </div>
    </div>
       
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :about %><br>
-      <%= f.text_area :about %>
+      <%= label_tag :about %><br>
+      <%= text_area_tag "doctor_profile[:about]" %>
     </div>
   </div>
       
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :profilepic %><br>
-      <%= f.text_area :profilepic %>           
+      <%= label_tag :profilepic %><br>
+      <%= text_area_tag "doctor_profile[:profilepic]" %>           
    </div>
   </div>
       
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :schedule %><br>
-      <%= f.text_field :schedule %>
+      <%= label_tag :schedule %><br>
+      <%= text_area_tag "doctor_profile[:schedule]" %>
     </div>
   </div>
       
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :speciality %><br>
-      <%= f.text_field :speciality %>
+      <%= label_tag :speciality %><br>
+      <%= text_field_tag "doctor_profile[:speciality]" %>
     </div>
   </div>
       
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
+      <%= label_tag :title %><br>
+      <%= text_field_tag "doctor_profile[:title]" %>
     </div>
   </div>
       
  <div class="form-group"> 
    <div class="container">
-      <%= f.label :userid %><br>
-      <%= f.text_field :userid %>         
+      <%= label_tag :userid %><br>
+     <%= text_field_tag "doctor_profile[:userid]" %>         
    </div>
  </div>
       
  <div class="form-group"> 
   <div class="container">
-    <%= f.label :zipcode %><br>
-    <%= f.text_field :zipcode %>
+    <%= label_tag :zipcode %><br>
+    <%= text_field_tag "doctor_profile[:zipcode]" %>
   </div>
  </div>
       
  <div class="form-group"> 
    <div class="container">
-    <%= f.label :fee %><br>
-    <%= f.text_field :fee %>
+    <%= label_tag :fee %><br>
+     <%= text_field_tag "doctor_profile[:fee]" %>
    </div>
   </div>
  
       
  <div class="form-group"> 
    <div class="container">
-     <%= f.label :plan %><br>
-     <%= f.text_field :plan %>
+     <%= label_tag :plan %><br>
+     <%= text_field_tag "doctor_profile[:plan]" %>
    </div>
  </div>
       
  <div class="form-group"> 
   <div class="container">
-    <%= f.label :npi %><br>
-    <%= f.text_field :npi %>
+    <%= label_tag :npi %><br>
+    <%= text_field_tag "doctor_profile[:npi]" %>
   </div>
 </div>
 
   <div class="form-group">
-    <%= f.submit class: "btn-group btn btn-lg btn-success"  %>
+    <%= submit_tag "Create", class: "btn-group btn btn-lg btn-success"%>
   </div>
 <% end %>
 

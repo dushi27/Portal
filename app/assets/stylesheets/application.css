@@ -76,12 +76,6 @@
   margin-top: 0;
 }
 
-/* for the jQuery validate
-.valid {
-  background-color: green;
-  color: white;
+div.field_with_errors {
+  display: inline;
 }
-.error {
-   background-color:red;
-   color: white;
-} */

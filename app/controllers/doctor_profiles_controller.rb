@@ -16,12 +16,15 @@ class DoctorProfilesController < ApplicationController
   end
 
   def create
+    #raise params.inspect
     @practice = Practice.find(session[:orgid])
     @doctor_profile = @practice.doctor_profiles.create(doctor_profile_params)
+    #@doctor_profile = DoctorProfile.new(doctor_profile_params)
+    
 
     respond_to do |format|
       if @doctor_profile.save
-        format.html { redirect_to new_doctor_profile_path, notice: "Doctor #{@doctor_profile.firstname + " " + @doctor_profile.lastname} profile was successfully created." }
+        format.html { redirect_to new_doctor_profile_path, notice: "Doctor #{@doctor_profile.firstname} #{@doctor_profile.lastname} profile was successfully created." }
         format.json { render :show, status: :created, location: @doctor_profile }
       else
         format.html { render :new }

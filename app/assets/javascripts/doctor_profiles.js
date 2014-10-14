@@ -56,22 +56,6 @@ $(document).ready(function() {
                         message: 'The fee is required'
                     }           
                }
-          },
-          
-          plan: {
-                validators: {
-                    notEmpty: {
-                        message: 'the plan is required'
-                    }           
-               }
-          },
-          
-          npi: {
-                validators: {
-                    notEmpty: {
-                        message: 'The NPI number is required'
-                    }           
-                }
           }
         } 
     });

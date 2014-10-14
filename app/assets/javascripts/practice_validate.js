@@ -13,34 +13,7 @@ $(document).ready(function() {
                         message: 'The name is required'
                     }                   
                 }
-            },
-                  
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email is required'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address'
-                    }
-                }
-            },
-           
-          address_1: {
-                validators: {
-                    notEmpty: {
-                        message: 'The street address is required'
-                    }
-                }
-            },
-          addres_2: {
-                validators: {
-                    notEmpty: {
-                        message: 'The city is required'
-                    }
-                }
-            },
-          
+            },    
           zip: {
                 validators: {   
                   notEmpty: {
@@ -52,15 +25,17 @@ $(document).ready(function() {
                     }                
                 }
              },
-          phone: {
+            email: {
                 validators: {
-                    phone: {
-                        message: 'Valid phone number is required'
-                    }                 
-                    
+                    notEmpty: {
+                        message: 'The email is required'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
                 }
-            }        
-
+            }
+          
         }
     });
 });

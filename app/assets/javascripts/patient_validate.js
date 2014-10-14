@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#docProfile").bootstrapValidator({
+    $("#ptntProfil").bootstrapValidator({
         message: 'This value is not valid',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -28,17 +28,9 @@ $(document).ready(function() {
                         message: 'The name can only consist of alphabetical, number and underscore'
                     }
                 }
-            },            
-                                         
-          speciality: {
-                validators: {   
-                  notEmpty: {
-                        message: 'The state is required'
-                  }
-                }
-            },
-          
-          zipcode: {
+            },          
+            
+         zipcode: {
                 validators: {   
                   notEmpty: {
                         message: 'The ZipCode is required'
@@ -50,29 +42,13 @@ $(document).ready(function() {
                 }                
           },
           
-          fee: {
-                validators: {
-                    notEmpty: {
-                        message: 'The fee is required'
-                    }           
-               }
-          },
-          
-          plan: {
-                validators: {
-                    notEmpty: {
-                        message: 'the plan is required'
-                    }           
-               }
-          },
-          
-          npi: {
-                validators: {
-                    notEmpty: {
-                        message: 'The NPI number is required'
-                    }           
+         docpref1: {
+                validators: {   
+                  notEmpty: {
+                        message: 'Please specify atleast one doctor'
+                  }
                 }
-          }
+            }
         } 
     });
 });

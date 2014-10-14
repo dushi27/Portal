@@ -1,5 +1,10 @@
 <div class="container"> 
-  <br><%=link_to '', edit_practice_path(session[:orgid]), class:'pull-left glyphicon glyphicon-chevron-left'%>
+  <br>
+  <%if (session[:orgid]).nil?%>
+    <%=link_to '', new_practice_path, class:'pull-left glyphicon glyphicon-chevron-left'%>
+  <%else%>
+    <%=link_to '', edit_practice_path(session[:orgid]), class:'pull-left glyphicon glyphicon-chevron-left'%>
+  <%end%>
   <%=link_to '', sub_merchant_new_path, class:'pull-right glyphicon glyphicon-chevron-right'%><br>
   
   <h1>New doctor_profile</h1> 

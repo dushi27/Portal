@@ -1,67 +1,55 @@
-<%= form_for(@patient_profile, :html => { :id => 'ptntProfil'}) do |f| %>
-  <% if @patient_profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@patient_profile.errors.count, "error") %> prohibited this patient_profile from being saved:</h2>
-
-      <ul>
-      <% @patient_profile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+<%= form_tag('/patient_profiles', :id => 'ptntProfil') do %>
   <div class="form-group"> 
     <div class="container">
-      <%= f.label :firstname %><br>
-      <%= f.text_field :firstname %>
+      <%= label_tag :firstname %><br>
+      <%= text_field_tag "patient_profile[:firstname]" %>
     </div>
  </div>
 
  <div class="form-group"> 
    <div class="container">
-    <%= f.label :lastname %><br>
-    <%= f.text_field :lastname %>
+    <%= label_tag :lastname %><br>
+     <%= text_field_tag "patient_profile[:lastname]" %>
    </div>
  </div>
 
  <div class="form-group"> 
    <div class="container">
-    <%= f.label :profilepic %><br>
-    <%= f.text_area :profilepic %>
+    <%= label_tag :profilepic %><br>
+    <%= text_area_tag "patient_profile[:profilepic]" %>
   </div>
  </div>
 
  <div class="form-group"> 
   <div class="container">
-    <%= f.label :zipcode %><br>
-    <%= f.text_field :zipcode %>
+    <%= label_tag :zipcode %><br>
+    <%= text_field_tag "patient_profile[:zipcode]" %>
   </div>
  </div>
 
  <div class="form-group"> 
   <div class="container">
-    <%= f.label :docpref1 %><br>
-    <%= f.number_field :docpref1 %>
+    <%= label_tag :docpref1 %><br>
+    <%= number_field_tag "patient_profile[:docpref1]" %>
   </div>
  </div>
    
  <div class="form-group"> 
   <div class="container">
-    <%= f.label :docpref2 %><br>
-    <%= f.number_field :docpref2 %>
+    <%= label_tag :docpref2 %><br>
+    <%= number_field_tag "patient_profile[:docpref2]" %>
   </div>
  </div>
    
   <div class="form-group"> 
    <div class="container">
-    <%= f.label :doctpref3 %><br>
-    <%= f.number_field :doctpref3 %>
+    <%= label_tag :doctpref3 %><br>
+    <%= number_field_tag "patient_profile[:docpref3]" %>
    </div>
   </div>
     
   <div class="form-group">
-    <%= f.submit class: "btn-group btn btn-lg btn-success"  %>
+    <%= submit_tag "Create", class: "btn-group btn btn-lg btn-success"%>
   </div>
 <% end %>
 

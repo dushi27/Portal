@@ -7,7 +7,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            firstname: {
+            'patient_profile[:firstname]': {
                 validators: {
                     notEmpty: {
                         message: 'The first name is required'
@@ -18,7 +18,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            lastname: {
+            'patient_profile[:lastname]': {
                 validators: {
                     notEmpty: {
                         message: 'The last name is required'
@@ -30,7 +30,7 @@ $(document).ready(function() {
                 }
             },          
             
-         zipcode: {
+         'patient_profile[:zipcode]': {
                 validators: {   
                   notEmpty: {
                         message: 'The ZipCode is required'
@@ -42,7 +42,7 @@ $(document).ready(function() {
                 }                
           },
           
-         docpref1: {
+         'patient_profile[:docpref1]': {
                 validators: {   
                   notEmpty: {
                         message: 'Please specify atleast one doctor'

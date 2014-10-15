@@ -16,6 +16,7 @@ class PracticesController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @practice = Practice.new(practice_params)
 
     respond_to do |format|

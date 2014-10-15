@@ -14,7 +14,7 @@ module ApplicationHelper
     end
 
   
-  def text_field(name, value = nil, options = {})
+    def text_area_tag(name, value = nil, options = {})
       class_name = options[:class]
         if class_name.nil?
           options[:class] = FORM_CONTROL_CLASS
@@ -26,7 +26,7 @@ module ApplicationHelper
    
   end
     
-  def number_field(name, value = nil, options = {})
+  def number_field_tag(name, value = nil, options = {})
       class_name = options[:class]
         if class_name.nil?
           options[:class] = FORM_CONTROL_CLASS

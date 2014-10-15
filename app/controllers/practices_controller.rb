@@ -16,7 +16,8 @@ class PracticesController < ApplicationController
   end
 
   def create
-    #raise params.inspect
+    @form_method = 'post'
+    
     @practice = Practice.new(practice_params)
     @practice.name = params['practice'][':name']
     @practice.speciality = params['practice'][':name']
@@ -41,6 +42,7 @@ class PracticesController < ApplicationController
   end
 
   def update
+    @form_method = 'put'
     @practice = Practice.find(session[:orgid])
     respond_to do |format|
       if @practice.update(practice_params)

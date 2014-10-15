@@ -1,49 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="container"> 
+  <br><%=link_to '', new_doctor_profile_path, class:'pull-right glyphicon glyphicon-chevron-right'%><br>
+  <h1>Practice Information</h1><br>
+  <p>
+    <strong class="lead">Name:</strong>
+    <%= @practice.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @practice.name %>
-</p>
+  <p>
+    <strong>Speciality:</strong>
+    <%= @practice.speciality %>
+  </p>
 
-<p>
-  <strong>Speciality:</strong>
-  <%= @practice.speciality %>
-</p>
+  <p>
+    <strong>Address 1:</strong>
+    <%= @practice.address_1 %>
+  </p>
 
-<p>
-  <strong>Address 1:</strong>
-  <%= @practice.address_1 %>
-</p>
+  <p>
+    <strong>Addres 2:</strong>
+    <%= @practice.addres_2 %>
+  </p>
 
-<p>
-  <strong>Addres 2:</strong>
-  <%= @practice.addres_2 %>
-</p>
+  <p>
+    <strong>Zip:</strong>
+    <%= @practice.zip %>
+  </p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @practice.zip %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @practice.phone %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @practice.phone %>
-</p>
+  <p>
+    <strong>Fax:</strong>
+    <%= @practice.fax %>
+  </p>
 
-<p>
-  <strong>Fax:</strong>
-  <%= @practice.fax %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @practice.email %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @practice.email %>
-</p>
+  <p>
+    <strong>Website:</strong>
+    <%= @practice.website %>
+  </p>
+</div>
 
-<p>
-  <strong>Website:</strong>
-  <%= @practice.website %>
-</p>
-
-<%= link_to 'Edit', edit_practice_path(@practice) %> |
-<%= link_to 'Back', practices_path %>

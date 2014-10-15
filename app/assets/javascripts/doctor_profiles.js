@@ -7,7 +7,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-          'doctor_profile[:firstname ]': {
+          'doctor_profile[:firstname]': {
                 validators: {
                     notEmpty: {
                         message: 'The first name is required'
@@ -84,7 +84,7 @@ $(document).ready(function() {
                   }
                 }
             },
-           'doctor_profile[:speciality]': {
+           'doctor_profile[:npi]': {
                 validators: {   
                   notEmpty: {
                         message: 'The NPI is required'

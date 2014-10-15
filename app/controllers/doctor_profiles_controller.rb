@@ -17,9 +17,24 @@ class DoctorProfilesController < ApplicationController
 
   def create
     #raise params.inspect
-    @practice = Practice.find(session[:orgid])
-    @doctor_profile = @practice.doctor_profiles.create(doctor_profile_params)
+    #@practice = Practice.find(session[:orgid])
+    #@doctor_profile = @practice.doctor_profiles.create(doctor_profile_params)
     #@doctor_profile = DoctorProfile.new(doctor_profile_params)
+    @doctor_profile = DoctorProfile.new
+    @doctor_profile.firstname = params['doctor_profile'][':firstname']
+    @doctor_profile.lastname = params['doctor_profile'][':lastname']
+    @doctor_profile.about = params['doctor_profile'][':about']
+    @doctor_profile.profilepic = params['doctor_profile'][':profilepic']
+    @doctor_profile.schedule = params['doctor_profile'][':schedule']
+    @doctor_profile.speciality = params['doctor_profile'][':speciality']
+    @doctor_profile.title = params['doctor_profile'][':title']
+    #@doctor_profile.userid = params['doctor_profile'][':userid']
+    @doctor_profile.zipcode = params['doctor_profile'][':zipcode']
+    @doctor_profile.fee = params['doctor_profile'][':fee']
+    #@doctor_profile.decimal = params['doctor_profile'][':decimal']
+    @doctor_profile.plan = params['doctor_profile'][':plan']
+    @doctor_profile.npi = params['doctor_profile'][':npi']
+    @doctor_profile.orgid = session[:orgid]
     
 
     respond_to do |format|

@@ -31,7 +31,7 @@ class PracticesController < ApplicationController
     respond_to do |format|
       if @practice.save
         session[:orgid] = @practice.id
-        format.html { redirect_to edit_practice_path(@practice), notice: "Practice #{@practice.name} was successfully created." }
+        format.html { redirect_to new_doctor_profile_path(@practice), notice: "Practice #{@practice.name} was successfully created." }
         format.json { render :show, status: :created, location: @practice }
       else
         format.html { render :new }

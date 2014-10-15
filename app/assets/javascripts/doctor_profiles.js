@@ -29,11 +29,39 @@ $(document).ready(function() {
                     }
                 }
             },            
+          'doctor_profile[:about]': {
+                validators: {
+                    notEmpty: {
+                        message: 'The about field is required'
+                    }   
+                }
+            }, 
+          "doctor_profile[:profilepic]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The picture is required'
+                    }   
+                }
+            }, 
+           'doctor_profile[:schedule]': {
+                validators: {
+                    notEmpty: {
+                        message: 'The schedule is required'
+                    }   
+                }
+            },
                                          
           'doctor_profile[:speciality]': {
                 validators: {   
                   notEmpty: {
                         message: 'The state is required'
+                  }
+                }
+            },
+           'doctor_profile[:title]': {
+                validators: {   
+                  notEmpty: {
+                        message: 'The title is required'
                   }
                 }
             },
@@ -49,7 +77,20 @@ $(document).ready(function() {
                     }                
                 }                
           },
-          
+          'doctor_profile[:plan]': {
+                validators: {   
+                  notEmpty: {
+                        message: 'The plan is required'
+                  }
+                }
+            },
+           'doctor_profile[:speciality]': {
+                validators: {   
+                  notEmpty: {
+                        message: 'The NPI is required'
+                  }
+                }
+            },
           'doctor_profile[:fee]': {
                 validators: {
                     notEmpty: {

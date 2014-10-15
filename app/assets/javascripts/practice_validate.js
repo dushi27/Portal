@@ -7,14 +7,35 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            name: {
+            "practice[:speciality]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The speciality is required'
+                    }                   
+                }
+            }, 
+          "practice[:name]": {
                 validators: {
                     notEmpty: {
                         message: 'The name is required'
                     }                   
                 }
-            },    
-          zip: {
+            }, 
+          "practice[:address_1]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The address is required'
+                    }                   
+                }
+            },  
+          "practice[:addres_2]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The address is required'
+                    }                   
+                }
+            },  
+          "practice[:zip]": {
                 validators: {   
                   notEmpty: {
                         message: 'The ZipCode is required'
@@ -25,7 +46,28 @@ $(document).ready(function() {
                     }                
                 }
              },
-            email: {
+          "practice[:phone]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The phone number is required'
+                    }                   
+                }
+            },  
+          "practice[:fax]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The fax is required'
+                    }                   
+                }
+            },  
+          "practice[:web]": {
+                validators: {
+                    notEmpty: {
+                        message: 'The fax is required'
+                    }                   
+                }
+            },
+          "practice[:email]": {
                 validators: {
                     notEmpty: {
                         message: 'The email is required'

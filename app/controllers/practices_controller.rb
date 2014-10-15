@@ -16,8 +16,17 @@ class PracticesController < ApplicationController
   end
 
   def create
-    raise params.inspect
+    #raise params.inspect
     @practice = Practice.new(practice_params)
+    @practice.name = params['practice'][':name']
+    @practice.speciality = params['practice'][':name']
+    @practice.address_1 = params['practice'][':address_1']
+    @practice.addres_2 = params['practice'][':addres_2']
+    @practice.zip = params['practice'][':zip']
+    @practice.phone = params['practice'][':phone']
+    @practice.fax = params['practice'][':fax']
+    @practice.email = params['practice'][':email']
+    @practice.website = params['practice'][':web']
 
     respond_to do |format|
       if @practice.save

@@ -108,6 +108,13 @@ $(document).ready(function() {
                     }           
                }
             },
+          acctno: {
+                validators: {
+                    notEmpty: {
+                        message: 'the tax ID is required'
+                    }           
+               }
+            },
           accountno: {
                 validators: {
                     notEmpty: {

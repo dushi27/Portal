@@ -39,16 +39,7 @@ module ApplicationHelper
   end
   
     
-  def text_area(name, value = nil, options = {})
-      class_name = options[:class]
-        if class_name.nil?
-          options[:class] = FORM_CONTROL_CLASS
-        else
-          options[:class] << " #{FORM_CONTROL_CLASS}" if
-            " #{class_name} ".index(" #{FORM_CONTROL_CLASS} ").nil?
-        end
-      super
-    end
+
   end
 
   include BootstrapExtension

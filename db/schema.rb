@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141015135914) do
+ActiveRecord::Schema.define(version: 20141015143906) do
 
   create_table "doctor_profiles", force: true do |t|
     t.string   "firstname"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20141015135914) do
     t.string   "userid"
     t.string   "zipcode"
     t.decimal  "fee",                         precision: 8, scale: 2
-    t.decimal  "decimal",                     precision: 8, scale: 2
     t.string   "plan"
     t.string   "npi"
     t.string   "orgid"

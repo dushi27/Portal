@@ -27,8 +27,7 @@ class DoctorProfilesController < ApplicationController
     @doctor_profile.profilepic = params['doctor_profile'][':profilepic']
     @doctor_profile.schedule = params['doctor_profile'][':schedule']
     @doctor_profile.speciality = params['doctor_profile'][':speciality']
-    @doctor_profile.title = params['doctor_profile'][':title']
-    #@doctor_profile.userid = params['doctor_profile'][':userid']
+    @doctor_profile.title = params['doctor_profile'][':title']    
     @doctor_profile.zipcode = params['doctor_profile'][':zipcode']
     @doctor_profile.fee = params['doctor_profile'][':fee']
     #@doctor_profile.decimal = params['doctor_profile'][':decimal']
@@ -39,6 +38,7 @@ class DoctorProfilesController < ApplicationController
 
     respond_to do |format|
       if @doctor_profile.save
+        @doctor_profile.userid = @doctor_profile.id
         format.html { redirect_to new_doctor_profile_path, notice: "Doctor #{@doctor_profile.firstname} #{@doctor_profile.lastname} profile was successfully created." }
         format.json { render :show, status: :created, location: @doctor_profile }
       else

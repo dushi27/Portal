@@ -10,7 +10,7 @@ class CreateDoctorProfiles < ActiveRecord::Migration
       t.string :title
       t.string :userid
       t.string :zipcode
-      t.decimal :fee, :decimal, :precision => 8, :scale => 2      
+      t.decimal :fee, :precision => 8, :scale => 2      
       t.string :plan
       t.string :npi
       t.string :orgid

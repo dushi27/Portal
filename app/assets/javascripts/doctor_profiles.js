@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#docProfile").bootstrapValidator({
-        message: 'This value is not valid',
+        message: 'This input is not valid',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -54,7 +54,7 @@ $(document).ready(function() {
           'doctor_profile[:speciality]': {
                 validators: {   
                   notEmpty: {
-                        message: 'The state is required'
+                        message: 'The State is required'
                   }
                 }
             },

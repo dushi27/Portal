@@ -28,7 +28,18 @@ $(document).ready(function() {
                         message: 'The name can only consist of alphabetical, number and underscore'
                     }
                 }
-            },          
+            },    
+          "patient_profile[:profilepic]": {
+                validators: {
+                    notEmpty: {
+                        message: 'Profile picture is required'
+                    },                    
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The name can only consist of alphabetical, number and underscore'
+                    }
+                }
+            },      
             
          'patient_profile[:zipcode]': {
                 validators: {   

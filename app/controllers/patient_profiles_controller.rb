@@ -16,10 +16,8 @@ class PatientProfilesController < ApplicationController
   end
 
   def create
-    #raise params.inspect
-    #@patient_profile = PatientProfile.new(patient_profile_params)
-    @patient_profile = PatientProfile.new
-    #@patient_profile.userid = @patient_profile.id
+    @patient_profile = PatientProfile.create()
+    @patient_profile.userid = @patient_profile.id
     @patient_profile.firstname = params['patient_profile'][':firstname']
     @patient_profile.lastname = params['patient_profile'][':lastname']
     @patient_profile.docpref1 = params['patient_profile'][':docpref1']

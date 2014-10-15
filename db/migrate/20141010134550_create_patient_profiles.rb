@@ -9,7 +9,7 @@ class CreatePatientProfiles < ActiveRecord::Migration
       t.string :zipcode
       t.integer :docpref1
       t.integer :docpref2
-      t.integer :doctpref3
+      t.integer :docpref3
 
       t.timestamps
     end

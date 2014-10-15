@@ -3,7 +3,7 @@ class CreateDoctorProfiles < ActiveRecord::Migration
     create_table :doctor_profiles do |t|
       t.string :firstname
       t.string :lastname
-      t.text :about
+      t.string :about
       t.text :profilepic, :limit => 16777215
       t.string :schedule
       t.string :speciality

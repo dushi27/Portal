@@ -16,13 +16,11 @@ class PracticesController < ApplicationController
   end
 
   def create
-    @form_method = 'post'
-    
     @practice = Practice.new(practice_params)
     @practice.name = params['practice'][':name']
     @practice.speciality = params['practice'][':name']
     @practice.address_1 = params['practice'][':address_1']
-    @practice.addres_2 = params['practice'][':addres_2']
+    @practice.address_2 = params['practice'][':addres_2']
     @practice.zip = params['practice'][':zip']
     @practice.phone = params['practice'][':phone']
     @practice.fax = params['practice'][':fax']
@@ -42,7 +40,6 @@ class PracticesController < ApplicationController
   end
 
   def update
-    @form_method = 'put'
     @practice = Practice.find(session[:orgid])
     respond_to do |format|
       if @practice.update(practice_params)
@@ -69,6 +66,6 @@ class PracticesController < ApplicationController
     end
   
     def practice_params
-      params.require(:practice).permit(:name, :speciality, :address_1, :addres_2, :zip, :phone, :fax, :email, :website)
+      params.require(:practice).permit(:name, :speciality, :address_1, :address_2, :zip, :phone, :fax, :email, :website)
     end
 end

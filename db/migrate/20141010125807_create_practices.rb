@@ -4,7 +4,7 @@ class CreatePractices < ActiveRecord::Migration
       t.string :name
       t.string :speciality
       t.string :address_1
-      t.string :addres_2
+      t.string :address_2
       t.string :zip
       t.string :phone
       t.string :fax

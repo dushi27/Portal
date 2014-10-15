@@ -24,7 +24,7 @@ class PatientProfilesController < ApplicationController
     @patient_profile.lastname = params['patient_profile'][':lastname']
     @patient_profile.docpref1 = params['patient_profile'][':docpref1']
     @patient_profile.docpref2 = params['patient_profile'][':docpref2']
-    @patient_profile.doctpref3 = params['patient_profile'][':docpref3']
+    @patient_profile.docpref3 = params['patient_profile'][':docpref3']
     @patient_profile.pcprequest = params['patient_profile'][':pcprequest']
     @patient_profile.zipcode = params['patient_profile'][':zipcode']
     @patient_profile.profilepic = params['patient_profile'][':profilepic']

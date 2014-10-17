@@ -15,7 +15,8 @@ class PatientProfilesController < ApplicationController
   def edit
   end
 
-  def create
+  def create   
+    #raise params.inspect
     @patient_profile = PatientProfile.create()
     @patient_profile.userid = @patient_profile.id
     @patient_profile.firstname = params['patient_profile'][':firstname']
@@ -25,7 +26,8 @@ class PatientProfilesController < ApplicationController
     @patient_profile.docpref3 = params['patient_profile'][':docpref3']
     @patient_profile.pcprequest = params['patient_profile'][':pcprequest']
     @patient_profile.zipcode = params['patient_profile'][':zipcode']
-    @patient_profile.profilepic = params['patient_profile'][':profilepic']
+    @patient_profile.profilepic = Base64.encode64(params['patient_profile'][':profilepic'].read) 
+
     @patient_profile.save
     respond_to do |format|
       if @patient_profile.save

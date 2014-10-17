@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Firstname:</strong>
   <%= @doctor_profile.firstname %>
@@ -12,7 +10,7 @@
 
 <p>
   <strong>Profilepic:</strong>
-  <%= @doctor_profile.profilepic %>
+  <%= image_tag "data:image/jpeg;base64,#{@doctor_profile.profilepic}" %>
 </p>
 
 <p>
@@ -50,13 +48,9 @@
   <%= @doctor_profile.plan %>
 </p>
 
-<p>
-  <strong>Plan:</strong>
-  <%= @doctor_profile.about %>
-</p>
 
 <p>
-  <strong>Npi:</strong>
+  <strong>NPI Number:</strong>
   <%= @doctor_profile.npi %>
 </p>
 

@@ -1,4 +1,4 @@
-<%= form_tag('/patient_profiles', :id => 'ptntProfil') do %>
+<%= form_tag('/patient_profiles',:multipart => true,  :id => 'ptntProfil') do %>
   <div class="form-group"> 
     <div class="container">
       <%= label_tag :firstname %><br>
@@ -16,7 +16,7 @@
  <div class="form-group"> 
    <div class="container">
     <%= label_tag :profilepic %><br>
-    <%= text_area_tag "patient_profile[:profilepic]" %>
+     <%= file_field_tag "patient_profile[:profilepic]" %>
   </div>
  </div>
 
@@ -29,21 +29,21 @@
 
  <div class="form-group"> 
   <div class="container">
-    <%= label_tag :docpref1 %><br>
+    <%= label_tag :docpref1, 'First Doctor Preference' %><br>
     <%= number_field_tag "patient_profile[:docpref1]" %>
   </div>
  </div>
    
  <div class="form-group"> 
   <div class="container">
-    <%= label_tag :docpref2 %><br>
+    <%= label_tag :docpref2, 'Second Doctor Preference' %><br>
     <%= number_field_tag "patient_profile[:docpref2]" %>
   </div>
  </div>
    
   <div class="form-group"> 
    <div class="container">
-    <%= label_tag :doctpref3 %><br>
+     <%= label_tag :doctpref3, 'Third Doctor Preference' %><br>
     <%= number_field_tag "patient_profile[:docpref3]" %>
    </div>
   </div>

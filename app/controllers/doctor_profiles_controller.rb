@@ -16,11 +16,12 @@ class DoctorProfilesController < ApplicationController
   end
 
   def create
+    #raise params.inspect
     @doctor_profile = DoctorProfile.create()
     @doctor_profile.firstname = params['doctor_profile'][':firstname']
     @doctor_profile.lastname = params['doctor_profile'][':lastname']
     @doctor_profile.about = params['doctor_profile'][':about']
-    @doctor_profile.profilepic = params['doctor_profile'][':profilepic']
+    @doctor_profile.profilepic = Base64.encode64(params['doctor_profile'][':profilepic'].read) 
     @doctor_profile.schedule = params['doctor_profile'][':schedule']
     @doctor_profile.speciality = params['doctor_profile'][':speciality']
     @doctor_profile.title = params['doctor_profile'][':title']    

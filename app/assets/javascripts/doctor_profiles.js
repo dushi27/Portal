@@ -95,7 +95,10 @@ $(document).ready(function() {
                 validators: {
                     notEmpty: {
                         message: 'The fee is required'
-                    }           
+                    },
+                    numeric:{
+                      message: 'The Fee has to be numeric'
+                    } 
                }
           }
         } 

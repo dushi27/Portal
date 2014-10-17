@@ -33,10 +33,6 @@ $(document).ready(function() {
                 validators: {
                     notEmpty: {
                         message: 'Profile picture is required'
-                    },                    
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_]+$/,
-                        message: 'The name can only consist of alphabetical, number and underscore'
                     }
                 }
             },      

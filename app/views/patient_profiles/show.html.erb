@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @patient_profile.user_id %>
-</p>
 
 <p>
   <strong>Firstname:</strong>
@@ -21,8 +17,8 @@
 </p>
 
 <p>
-  <strong>Profilepic:</strong>
-  <%= @patient_profile.profilepic %>
+  <strong>Profilepic:</strong>  
+  <%= image_tag "data:image/jpeg;base64,#{@patient_profile.profilepic}" %>
 </p>
 
 <p>
@@ -42,7 +38,7 @@
 
 <p>
   <strong>Doctpref3:</strong>
-  <%= @patient_profile.doctpref3 %>
+  <%= @patient_profile.docpref3 %>
 </p>
 
 <%= link_to 'Edit', edit_patient_profile_path(@patient_profile) %> |

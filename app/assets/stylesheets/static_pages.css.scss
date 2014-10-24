@@ -1,2 +1,12 @@
-.nav-justified{ 
+table td {
+  width:30px;
+  height:30px;
+  text-align:center;
+  vertical-align:middle;
+  background-color:#ccc;
+  border:1px solid #fff;
+}
+
+table td.highlighted {
+  background-color:#999;
 }

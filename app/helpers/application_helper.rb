@@ -42,5 +42,6 @@ module ApplicationHelper
 
   end
 
-  include BootstrapExtension
+  include BootstrapExtension 
+  
 end

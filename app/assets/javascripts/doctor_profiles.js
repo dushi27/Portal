@@ -45,9 +45,7 @@ $(document).ready(function() {
             }, 
            'doctor_profile[:schedule]': {
                 validators: {
-                    notEmpty: {
-                        message: 'The schedule is required'
-                    }   
+                    
                 }
             },
                                          

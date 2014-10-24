@@ -22,7 +22,7 @@ class DoctorProfilesController < ApplicationController
     @doctor_profile.lastname = params['doctor_profile'][':lastname']
     @doctor_profile.about = params['doctor_profile'][':about']
     @doctor_profile.profilepic = Base64.encode64(params['doctor_profile'][':profilepic'].read) 
-    @doctor_profile.schedule = params['doctor_profile'][':schedule']
+    @doctor_profile.schedule = DEMO_SCHEDULE
     @doctor_profile.speciality = params['doctor_profile'][':speciality']
     @doctor_profile.title = params['doctor_profile'][':title']    
     @doctor_profile.zipcode = params['doctor_profile'][':zipcode']
@@ -36,6 +36,7 @@ class DoctorProfilesController < ApplicationController
       if @doctor_profile.save
         format.html { redirect_to new_doctor_profile_path, notice: "Doctor #{@doctor_profile.firstname} #{@doctor_profile.lastname}'s' profile was successfully created." }
         format.json { render :show, status: :created, location: @doctor_profile }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @doctor_profile.errors, status: :unprocessable_entity }
@@ -65,7 +66,7 @@ class DoctorProfilesController < ApplicationController
 
   private
     def set_doctor_profile
-      @doctor_profile = DoctorProfile.find(params[:id])
+      @doctor_profile = DoctorProfile.find(params[:id])      
     end
 
     def doctor_profile_params

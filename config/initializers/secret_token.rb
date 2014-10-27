@@ -1,0 +1,1 @@
+Portal::Application.config.secret_key_base = 'd3ce57921c0666fe0b43c8342c7876584aee731bc639235ac2b7f9c4cf0fe8e15a421909b393380af5124ad916ecbb0f626c4f97a3184ee1ccdd62718c17f0f4'
